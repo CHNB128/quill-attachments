@@ -6,7 +6,7 @@ Attachments plugin for Quill rich text editor
 
 # Usage
 
-```
+```js
 new Quill('#editor', {
   modules: {
     attachments: {
