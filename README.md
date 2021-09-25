@@ -2,7 +2,7 @@
 
 Attachments plugin for Quill rich text editor
 
-[](/screenshots/Peek_2021-09-25_17-36.gif)
+[](https://github.com/CHNB128/quill-attachments/blob/master/screenshots/Peek_2021-09-25_17-36.gif)
 
 # Usage
 
