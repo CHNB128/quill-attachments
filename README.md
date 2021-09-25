@@ -45,7 +45,13 @@ new Quill('#editor', {
 
 ```
 yarn watch
-yarn serve
+yarn demo
+```
+
+## Build for production
+
+```
+yarn build
 ```
 
 ## Commiting
