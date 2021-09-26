@@ -38,6 +38,8 @@ const quill = new Quill('#editor', {
         node.textContent = file.name
         return node
       },
+      onFileUploaded: (node, { url }) => {
+      },
       upload: file => {
         // return a Promise that resolves in a link to the uploaded image
         return new Promise((resolve, reject) => {

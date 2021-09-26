@@ -79,7 +79,9 @@ export default class AttachmentModule extends Module {
     if (element) {
       element.setAttribute('href', url);
       element.removeAttribute('id');
-      // element.classList.remove(constant.IMAGE_UPLOAD_PLACEHOLDER_CLASS_NAME);
+      if (typeof this.options.onFileUploaded === "function") {
+        this.options.onFileUploaded(element, { url })
+      }
     }
   }
 
