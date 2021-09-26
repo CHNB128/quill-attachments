@@ -15,6 +15,11 @@
       "path": "@commitlint/cz-commitlint"
     }
   },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not dead"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
