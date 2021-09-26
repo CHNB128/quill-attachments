@@ -1,4 +1,3 @@
-import Quill from 'quill'
 import constant from './constants';
 
 const Module = Quill.import('core/module');

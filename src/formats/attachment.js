@@ -1,4 +1,3 @@
-import Quill from 'quill';
 
 const Link = Quill.import('formats/link');
 

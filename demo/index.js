@@ -1,11 +1,10 @@
-import Quill from 'quill'
-import AttachmentsModule from '../src/index.js'
+import AttachmentsModule from '../dist/module.js'
 
 const MOCK_IMG_SRC = 'http://tva1.sinaimg.cn/crop.0.0.217.217.180/4c8b519djw8fa45br0vpxj2062062q33.jpg';
 
 Quill.register("modules/attachments", AttachmentsModule)
 
-const quill = new Quill('#editor', {
+new Quill('#editor', {
   theme: 'snow',
   modules: {
     toolbar: [

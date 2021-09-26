@@ -1,4 +1,3 @@
-import Quill from 'quill'
 import Attachment from './formats/attachment'
 import Module from './module'
 
