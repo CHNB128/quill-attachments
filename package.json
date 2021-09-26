@@ -2,12 +2,15 @@
   "name": "quill-attachments",
   "description": "Attachments plugin for Quill rich text editor",
   "author": "drake.aren@pm.me",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/module.js",
   "scripts": {
-    "watch": "parcel watch --dist-dir ./demo/dist ./demo/index.html",
-    "build": "parcel build --dist-dir ./dist ./src/index.js",
-    "demo": "serve ./demo/dist",
+    "watch": "parcel watch",
+    "build": "parcel build",
+    "demo": "serve ./demo",
     "commit": "git-cz"
   },
   "config": {
