@@ -8,7 +8,7 @@ Attachments plugin for Quill rich text editor
 
 Import module and register it.
 
-```
+```js
 import AttachmentsModule from './dist/module.js'
 
 Quill.register("modules/attachments", AttachmentsModule)
