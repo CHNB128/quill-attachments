@@ -6,27 +6,43 @@ Attachments plugin for Quill rich text editor
 
 # Usage
 
+Import module and register it.
+
+```
+import AttachmentsModule from './dist/module.js'
+
+Quill.register("modules/attachments", AttachmentsModule)
+```
+
+Then provide configuration for module.
+
 ```js
 new Quill('#editor', {
   modules: {
     attachments: {
       render: (node, { file }) => {
-        // Make what ever you need with doom node
-        // add clases or add inner nodes
         node.textContent = file.name
         return node
       },
+      onFileUploaded: (node, { url }) => {
+        // Allow page to be closed
+        window.onbeforeunload = () => {};
+      },
       upload: file => {
+        // Prevent page to be closed while file in uploading
+        window.onbeforeunload = () => {
+          return "You have attempted to leave this page. Are you sure?";
+        }
         // return a Promise that resolves in a link to the uploaded image
         return new Promise((resolve, reject) => {
           setTimeout(() => {
-            resolve("mocky url"); // Must resolve as a link to the image
+            resolve(MOCK_IMG_SRC); // Must resolve as a link to the image
           }, 1000);
           // const fd = new FormData();
           // fd.append("upload_file", file);
 
           // const xhr = new XMLHttpRequest();
-          // xhr.open("POST", `/api/files/add`, true);
+          // xhr.open("POST", `${window.location.pathname}/api/files/add`, true);
           // xhr.onload = () => {
           //   if (xhr.status === 200) {
           //     const response = JSON.parse(xhr.responseText);
@@ -40,6 +56,8 @@ new Quill('#editor', {
   },
 });
 ```
+
+Have fun!
 
 # Development
 
