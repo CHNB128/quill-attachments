@@ -39,8 +39,14 @@ const quill = new Quill('#editor', {
         return node
       },
       onFileUploaded: (node, { url }) => {
+        // Allow page to be closed
+        window.onbeforeunload = () => {};
       },
       upload: file => {
+        // Prevent page to be closed while file in uploading
+        window.onbeforeunload = () => {
+          return "You have attempted to leave this page. Are you sure?";
+        }
         // return a Promise that resolves in a link to the uploaded image
         return new Promise((resolve, reject) => {
           setTimeout(() => {
